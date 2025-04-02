@@ -8,7 +8,7 @@ namespace EmpresaForm
 {
     public partial class Cadastro2Form: Form
     {
-        Funcionario funcionario = TemporaryContext.FuncionarioTemp[0];
+        Funcionario funcionario = TemporaryContext.FuncionarioTemp;
 
         Cadastro1Form formAnterior = new Cadastro1Form();
 
@@ -34,8 +34,8 @@ namespace EmpresaForm
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
-            bool camposPreenchidos = txtCidade.Text != "" || txtBairro.Text == ""
-                || txtNumero.Text == "" || txtCep.Text == "";
+            bool camposPreenchidos = txtCidade.Text != "" || txtBairro.Text != ""
+                || txtNumero.Text != "" || txtCep.Text != "";
 
             if (camposPreenchidos)
             {
@@ -46,7 +46,7 @@ namespace EmpresaForm
 
                 Contexto.ListaFuncionarios.Add(funcionario);
 
-                TemporaryContext.FuncionarioTemp[0] = new Funcionario();
+                TemporaryContext.FuncionarioTemp = new Funcionario();
 
                 LimparFormulario();
                 MessageBox.Show("Funcionário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using EmpresaForm.Models;
 using EmpresaForm.Utils;
@@ -21,28 +19,27 @@ namespace EmpresaForm
         }
         private void btProx_Click(object sender, EventArgs e)
         {
-            var funcionario = new Funcionario();
-
-            funcionario.Id = IdFuncionario;
-            funcionario.Nome = txtNome.Text;
-            funcionario.Rg = txtRg.Text;
-            funcionario.Telefone = txtTel.Text;
-            funcionario.Ctps = txtCtps.Text;
-            funcionario.Setor = txtSetor.Text;
-            funcionario.Funcao = txtFuncao.Text;
-            funcionario.NumeroSala = Convert.ToInt32(txtSala.Text);
-
             bool camposPreenchidos = txtNome.Text != "" || txtRg.Text != "" || txtTel.Text != ""
                 || txtCtps.Text != "" || txtSetor.Text != "" 
                 || txtFuncao.Text != "" || txtSala.Text != "";
 
             if (camposPreenchidos && Validacao.ValidarCpf(txtCpf.Text))
             {
+                var funcionario = new Funcionario();
+
+                funcionario.Id = IdFuncionario;
+                funcionario.Nome = txtNome.Text;
                 funcionario.Cpf = txtCpf.Text;
+                funcionario.Rg = txtRg.Text;
+                funcionario.Telefone = txtTel.Text;
+                funcionario.Ctps = txtCtps.Text;
+                funcionario.Setor = txtSetor.Text;
+                funcionario.Funcao = txtFuncao.Text;
+                funcionario.NumeroSala = Convert.ToInt32(txtSala.Text);
 
                 IdFuncionario++;
 
-                TemporaryContext.FuncionarioTemp[0] = funcionario;
+                TemporaryContext.FuncionarioTemp = funcionario;
 
                 this.Hide();
 
