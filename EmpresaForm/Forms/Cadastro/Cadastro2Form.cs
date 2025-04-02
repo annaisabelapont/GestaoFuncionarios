@@ -34,20 +34,31 @@ namespace EmpresaForm
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
-            funcionario.Cidade = txtCidade.Text;
-            funcionario.Bairro = txtBairro.Text;
-            funcionario.NumeroCasa = Convert.ToInt32(txtNumero.Text);
-            funcionario.Cep = txtCep.Text;
+            bool camposPreenchidos = txtCidade.Text != "" || txtBairro.Text == ""
+                || txtNumero.Text == "" || txtCep.Text == "";
 
-            Contexto.ListaFuncionarios.Add(funcionario);
+            if (camposPreenchidos)
+            {
+                funcionario.Cidade = txtCidade.Text;
+                funcionario.Bairro = txtBairro.Text;
+                funcionario.NumeroCasa = Convert.ToInt32(txtNumero.Text);
+                funcionario.Cep = txtCep.Text;
 
-            TemporaryContext.FuncionarioTemp[0] = new Funcionario();
+                Contexto.ListaFuncionarios.Add(funcionario);
 
-            LimparFormulario();
-            MessageBox.Show("Funcionário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);
+                TemporaryContext.FuncionarioTemp[0] = new Funcionario();
 
-            this.Close();
-            formAnterior.Close();
+                LimparFormulario();
+                MessageBox.Show("Funcionário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK);
+
+                this.Close();
+                formAnterior.Close();
+            }
+            else
+            {
+                MessageBox.Show("Preencha todas as informações antes de efetuar o cadastro!");
+            }
+
         }
 
         private void cbUF_SelectedIndexChanged(object sender, EventArgs e)

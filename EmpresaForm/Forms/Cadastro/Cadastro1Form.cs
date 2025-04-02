@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using EmpresaForm.Models;
 using EmpresaForm.Utils;
@@ -30,7 +32,11 @@ namespace EmpresaForm
             funcionario.Funcao = txtFuncao.Text;
             funcionario.NumeroSala = Convert.ToInt32(txtSala.Text);
 
-            if (Validacao.ValidarCpf(txtCpf.Text) && btProx.Enabled)
+            bool camposPreenchidos = txtNome.Text != "" || txtRg.Text != "" || txtTel.Text != ""
+                || txtCtps.Text != "" || txtSetor.Text != "" 
+                || txtFuncao.Text != "" || txtSala.Text != "";
+
+            if (camposPreenchidos && Validacao.ValidarCpf(txtCpf.Text))
             {
                 funcionario.Cpf = txtCpf.Text;
 
@@ -44,7 +50,7 @@ namespace EmpresaForm
             }
             else
             {
-                MessageBox.Show("CPF inválido!", "Erro", MessageBoxButtons.OK);
+                MessageBox.Show("Consulte as informações antes de continuar.", "Erro", MessageBoxButtons.OK);
             }
         }
 

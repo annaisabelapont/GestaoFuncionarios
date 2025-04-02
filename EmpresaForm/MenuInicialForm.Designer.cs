@@ -48,9 +48,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 35);
+            this.label1.Location = new System.Drawing.Point(0, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(628, 45);
+            this.label1.Size = new System.Drawing.Size(694, 58);
             this.label1.TabIndex = 2;
             this.label1.Text = "Gestão de Funcionários";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,9 +60,9 @@
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 13F);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(1, 91);
+            this.label2.Location = new System.Drawing.Point(3, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(627, 30);
+            this.label2.Size = new System.Drawing.Size(691, 30);
             this.label2.TabIndex = 3;
             this.label2.Text = "Anna Isabela - 3°A Informática";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,9 +70,9 @@
             // btCadastro
             // 
             this.btCadastro.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.btCadastro.Location = new System.Drawing.Point(48, 180);
+            this.btCadastro.Location = new System.Drawing.Point(52, 164);
             this.btCadastro.Name = "btCadastro";
-            this.btCadastro.Size = new System.Drawing.Size(256, 132);
+            this.btCadastro.Size = new System.Drawing.Size(273, 132);
             this.btCadastro.TabIndex = 4;
             this.btCadastro.Text = "Cadastrar Funcionário";
             this.btCadastro.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // btListagem
             // 
             this.btListagem.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.btListagem.Location = new System.Drawing.Point(338, 180);
+            this.btListagem.Location = new System.Drawing.Point(371, 164);
             this.btListagem.Name = "btListagem";
-            this.btListagem.Size = new System.Drawing.Size(256, 132);
+            this.btListagem.Size = new System.Drawing.Size(273, 132);
             this.btListagem.TabIndex = 5;
             this.btListagem.Text = "Listar Funcionários";
             this.btListagem.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(629, 363);
+            this.ClientSize = new System.Drawing.Size(695, 352);
             this.Controls.Add(this.btListagem);
             this.Controls.Add(this.btCadastro);
             this.Controls.Add(this.label2);

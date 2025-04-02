@@ -54,7 +54,7 @@
             // 
             this.btProx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
             this.btProx.Font = new System.Drawing.Font("Yu Gothic UI", 14F);
-            this.btProx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(0)))));
+            this.btProx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btProx.Location = new System.Drawing.Point(601, 434);
             this.btProx.Name = "btProx";
             this.btProx.Size = new System.Drawing.Size(166, 61);

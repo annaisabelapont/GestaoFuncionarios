@@ -35,16 +35,23 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(211, 17);
+            this.label1.Location = new System.Drawing.Point(-1, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 45);
+            this.label1.Size = new System.Drawing.Size(806, 45);
             this.label1.TabIndex = 7;
             this.label1.Text = "Listagem de Funcionários";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtTabela
             // 
+            this.dtTabela.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtTabela.BackgroundColor = System.Drawing.Color.Silver;
             this.dtTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtTabela.Location = new System.Drawing.Point(32, 82);
@@ -65,7 +72,6 @@
             this.Text = "Listagem";
             ((System.ComponentModel.ISupportInitialize)(this.dtTabela)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
