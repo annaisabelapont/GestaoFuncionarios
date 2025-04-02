@@ -19,35 +19,47 @@ namespace EmpresaForm
         }
         private void btProx_Click(object sender, EventArgs e)
         {
-            bool camposPreenchidos = txtNome.Text != "" || txtRg.Text != "" || txtTel.Text != ""
-                || txtCtps.Text != "" || txtSetor.Text != "" 
-                || txtFuncao.Text != "" || txtSala.Text != "";
+            bool camposPreenchidos = 
+                txtNome.Text != ""
+                && txtRg.Text != ""
+                && txtTel.Text != ""
+                && txtCtps.Text != ""
+                && txtSetor.Text != ""
+                && txtFuncao.Text != ""
+                && txtSala.Text != "";
 
-            if (camposPreenchidos && Validacao.ValidarCpf(txtCpf.Text))
+            if (camposPreenchidos)
             {
-                var funcionario = new Funcionario();
+                if (Validacao.ValidarCpf(txtCpf.Text))
+                {
+                    var funcionario = new Funcionario();
 
-                funcionario.Id = IdFuncionario;
-                funcionario.Nome = txtNome.Text;
-                funcionario.Cpf = txtCpf.Text;
-                funcionario.Rg = txtRg.Text;
-                funcionario.Telefone = txtTel.Text;
-                funcionario.Ctps = txtCtps.Text;
-                funcionario.Setor = txtSetor.Text;
-                funcionario.Funcao = txtFuncao.Text;
-                funcionario.NumeroSala = Convert.ToInt32(txtSala.Text);
+                    funcionario.Id = IdFuncionario;
+                    funcionario.Nome = txtNome.Text;
+                    funcionario.Cpf = txtCpf.Text;
+                    funcionario.Rg = txtRg.Text;
+                    funcionario.Telefone = txtTel.Text;
+                    funcionario.Ctps = txtCtps.Text;
+                    funcionario.Setor = txtSetor.Text;
+                    funcionario.Funcao = txtFuncao.Text;
+                    funcionario.NumeroSala = Convert.ToInt32(txtSala.Text);
 
-                IdFuncionario++;
+                    IdFuncionario++;
 
-                TemporaryContext.FuncionarioTemp = funcionario;
+                    TemporaryContext.FuncionarioTemp = funcionario;
 
-                this.Hide();
+                    this.Hide();
 
-                new Cadastro2Form(this).ShowDialog();
+                    new Cadastro2Form(this).ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("CPF inválido!", "Erro", MessageBoxButtons.OK);
+                }
             }
             else
             {
-                MessageBox.Show("Consulte as informações antes de continuar.", "Erro", MessageBoxButtons.OK);
+                MessageBox.Show("Preencha todos os campos antes de continuar.", "Erro", MessageBoxButtons.OK);
             }
         }
 

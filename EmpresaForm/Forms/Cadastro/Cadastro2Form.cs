@@ -34,8 +34,8 @@ namespace EmpresaForm
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
-            bool camposPreenchidos = txtCidade.Text != "" || txtBairro.Text != ""
-                || txtNumero.Text != "" || txtCep.Text != "";
+            bool camposPreenchidos = txtCidade.Text != "" && txtBairro.Text != ""
+                && txtNumero.Text != "" && txtCep.Text != "";
 
             if (camposPreenchidos)
             {

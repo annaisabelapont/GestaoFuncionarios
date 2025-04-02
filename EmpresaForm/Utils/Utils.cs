@@ -8,24 +8,42 @@ namespace EmpresaForm.Utils
         public static bool ValidarCpf(string cpf)
         {
             cpf = LimparString(cpf);
-            if (VerificarIgual(cpf)) return false;
 
-            if (cpf.Length != 11) return false;
+            if (cpf.Length != 11 || VerificarIgual(cpf))
+            {
+                return false;
+            }
 
-            int soma = 0; //penultimo digito
+            // para validação do penúltimo dígito verificador
+            int soma = 0;
             for (int i = 0; i < 9; i++)
             {
                 soma += Convert.ToInt32(cpf[i].ToString()) * i;
             }
 
-            int soma2 = 0; //ultimo digito
+            if (soma % 11 >= 10)
+            {
+                soma = 0;
+            }
+
+            // para validação do último dígito verificador
+            int soma2 = 0;
             for (int i = 0; i < 10; i++)
             {
                 soma2 += Convert.ToInt32(cpf[i].ToString()) * i;
             }
 
-            if (soma % 11 != Convert.ToInt32(cpf[9].ToString()) && soma2 % 11 != Convert.ToInt32(cpf[10].ToString())) return false;
-            return true;
+            if (soma2 % 11 >= 10)
+            {
+                soma2 = 0;
+            }
+
+            // validação final
+            var penultimoDigito = Convert.ToInt32(cpf[9].ToString());
+            var ultimoDigito = Convert.ToInt32(cpf[10].ToString());
+
+            return !(soma % 11 != penultimoDigito
+                && soma2 % 11 != ultimoDigito);
         }
 
         private static bool VerificarIgual(string textoLimpo)
@@ -33,8 +51,12 @@ namespace EmpresaForm.Utils
             int i = 0;
             for (i = 0; i < textoLimpo.Length; i++)
             {
-                if (textoLimpo[i] != textoLimpo[0]) break;
+                if (textoLimpo[i] != textoLimpo[0])
+                {
+                    break;
+                }
             }
+
             return i == textoLimpo.Length;
         }
 

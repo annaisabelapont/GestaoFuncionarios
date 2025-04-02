@@ -60,7 +60,7 @@
             this.txtCep.Location = new System.Drawing.Point(282, 235);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(234, 35);
-            this.txtCep.TabIndex = 39;
+            this.txtCep.TabIndex = 5;
             // 
             // label6
             // 
@@ -78,7 +78,7 @@
             this.txtNumero.Location = new System.Drawing.Point(30, 235);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(234, 35);
-            this.txtNumero.TabIndex = 37;
+            this.txtNumero.TabIndex = 4;
             // 
             // label5
             // 
@@ -96,7 +96,7 @@
             this.txtBairro.Location = new System.Drawing.Point(532, 141);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(234, 35);
-            this.txtBairro.TabIndex = 35;
+            this.txtBairro.TabIndex = 3;
             // 
             // label4
             // 
@@ -114,7 +114,7 @@
             this.txtCidade.Location = new System.Drawing.Point(282, 141);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(234, 35);
-            this.txtCidade.TabIndex = 33;
+            this.txtCidade.TabIndex = 2;
             // 
             // label3
             // 
@@ -134,7 +134,7 @@
             this.btLimpar.Location = new System.Drawing.Point(320, 359);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(166, 61);
-            this.btLimpar.TabIndex = 30;
+            this.btLimpar.TabIndex = 7;
             this.btLimpar.Text = "Limpar";
             this.btLimpar.UseVisualStyleBackColor = false;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
@@ -147,7 +147,7 @@
             this.btCadastrar.Location = new System.Drawing.Point(599, 359);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(166, 61);
-            this.btCadastrar.TabIndex = 29;
+            this.btCadastrar.TabIndex = 8;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = false;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
@@ -170,7 +170,7 @@
             this.btVoltar.Location = new System.Drawing.Point(29, 359);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(166, 61);
-            this.btVoltar.TabIndex = 47;
+            this.btVoltar.TabIndex = 6;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
@@ -182,7 +182,7 @@
             this.cbUF.Location = new System.Drawing.Point(30, 141);
             this.cbUF.Name = "cbUF";
             this.cbUF.Size = new System.Drawing.Size(234, 38);
-            this.cbUF.TabIndex = 48;
+            this.cbUF.TabIndex = 1;
             this.cbUF.SelectedIndexChanged += new System.EventHandler(this.cbUF_SelectedIndexChanged);
             // 
             // Cadastro2Form

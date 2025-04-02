@@ -58,7 +58,7 @@
             this.btProx.Location = new System.Drawing.Point(601, 434);
             this.btProx.Name = "btProx";
             this.btProx.Size = new System.Drawing.Size(166, 61);
-            this.btProx.TabIndex = 8;
+            this.btProx.TabIndex = 32;
             this.btProx.Text = "Próximo";
             this.btProx.UseVisualStyleBackColor = false;
             this.btProx.Click += new System.EventHandler(this.btProx_Click);
@@ -81,7 +81,7 @@
             this.btLimpar.Location = new System.Drawing.Point(31, 434);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(166, 61);
-            this.btLimpar.TabIndex = 9;
+            this.btLimpar.TabIndex = 31;
             this.btLimpar.Text = "Limpar";
             this.btLimpar.UseVisualStyleBackColor = false;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
@@ -192,7 +192,7 @@
             this.txtSala.Location = new System.Drawing.Point(532, 359);
             this.txtSala.Name = "txtSala";
             this.txtSala.Size = new System.Drawing.Size(234, 35);
-            this.txtSala.TabIndex = 21;
+            this.txtSala.TabIndex = 30;
             // 
             // label9
             // 
